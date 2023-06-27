@@ -1,0 +1,41 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input-form {
+    border-style: solid;
+    border-radius: 25px;
+    padding: 1rem;
+}
+
+#poke-card {
+    margin: 1rem;
+    border-radius: 25px;
+    overflow: hidden;
+    border-color: black;
+}
+
+#search {
+    margin-left: 1rem;
+    padding-left: .5rem;
+}
+
+#poke-title {
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+#search-btn {
+    margin-top: .5rem;
+}
+
+#catch-btn {
+    margin-right: 4rem;
+    color: black;
+}
+
+#list-item {
+    background-color: antiquewhite;
+}
