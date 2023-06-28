@@ -42,7 +42,7 @@ const PokemonCard = () => {
                     type: data.types[0].type.name,
                     name: data.name,
                     img: data.sprites.front_shiny,
-                    abilities: [data.abilities[0].ability.name, data.abilities[1].ability.name],
+                    abilities: data.abilities.map((ability: any) => ability.ability.name),
                     moves: [data.moves[0].move.name, data.moves[1].move.name]
                 })
             }
@@ -83,8 +83,11 @@ const PokemonCard = () => {
                         <li className="list-group-item" id="list-item">Type: {pokemon.type}</li>
                         <li className="list-group-item" id="list-item">Move #1: {pokemon.moves[0]}</li>
                         <li className="list-group-item" id="list-item">Move #2: {pokemon.moves[1]}</li>
-                        <li className="list-group-item" id="list-item">Ability #1: {pokemon.abilities[0]}</li>
-                        <li className="list-group-item" id="list-item">Ability #2: {pokemon.abilities[1]}</li>
+                    </ul>
+                    <ul className="list-group list-group-flush text-capitalize">
+                        {pokemon.abilities.map((ability, index) => (
+                            <li className="list-group-item" id="list-item" key={index}>Ability: {ability}</li>
+                        ))}
                     </ul>
                     <div className="card-body">
                         <button className='btn btn-primary rounded-pill' id="catch-btn">Catch</button>
