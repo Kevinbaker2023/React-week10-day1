@@ -83,8 +83,6 @@ const PokemonCard = () => {
                         <li className="list-group-item" id="list-item">Type: {pokemon.type}</li>
                         <li className="list-group-item" id="list-item">Move #1: {pokemon.moves[0]}</li>
                         <li className="list-group-item" id="list-item">Move #2: {pokemon.moves[1]}</li>
-                    </ul>
-                    <ul className="list-group list-group-flush text-capitalize">
                         {pokemon.abilities.map((ability, index) => (
                             <li className="list-group-item" id="list-item" key={index}>Ability: {ability}</li>
                         ))}
